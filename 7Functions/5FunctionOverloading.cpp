@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+// ---------------------------------------------------function overloading-----------------------------------------------------------------------------------
+// Function overloading help us that a function whose name s are same but the argument are different then compiler will process it perfect function amnd give u the answer.
+int sum(int a, int b)
+//[2] here we can write float a also./ and also if we change the value a from int to float in the calling function the compiler will execute it by manging it.
+// this called function overloading.
+{
+    cout << "Using function with 2 arguments" << endl;
+    return a + b;
+}
+
+int sum(int a, int b, int c)
+{
+    cout << "Using function with 3 arguments" << endl;
+    return a + b + c;
+}
+
+//[3] Calculate the volume of a cylinder
+int volume(double r, int h)
+{
+    return (3.14 * r * r * h);
+}
+
+// [4]Calculate the volume of a cube
+int volume(int a)
+{
+    return (a * a * a);
+}
+
+//[5] Rectangular box
+int volume(int l, int b, int h)
+{
+    return (l * b * h);
+}
+
+int main()
+{
+    cout << "The sum of 3 and 6 is " << sum(3, 6) << endl;
+    cout << "The sum of 3, 7 and 6 is " << sum(3, 7, 6) << endl;
+    cout << "The volume of cuboid of 3, 7 and 6 is " << volume(3, 7, 6) << endl;
+    cout << "The volume of cylinder of radius 3 and height 6 is " << volume(3, 6) << endl;
+    cout << "The volume of cube of side 3 is " << volume(3) << endl;
+    return 0;
+}
